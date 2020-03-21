@@ -70,7 +70,8 @@ def create_response(response_code, ver=0, dst_port=0, dst_ip="0.0.0.0"):
 	dst_ip = b''.join([int.to_bytes(int(x), 1, 'big') for x in dst_ip.split(".")])
 	dst_port = int.to_bytes(dst_port, 2, 'big')
 
-	return b''.join([ver, response_code, dst_port, dst_ip, b'\x00'])
+	return b''.join([ver, response_code, dst_port, dst_ip])
+
 
 
 def connect_to_app(client_s):
