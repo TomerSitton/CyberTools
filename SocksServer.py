@@ -11,10 +11,10 @@ class ResponseCode(Enum):
 	An Enum containing the possible response code a socks CONNECT and BIND 
 	commands can have
 	"""
-	GRANTED = 90
-	REJ_OR_FAIL = 91
-	FAIL_CONN_CLI_IDENTD = 92
-	REJ_DIFF_UID = 93
+	GRANTED = 49
+	REJ_OR_FAIL = 50
+	FAIL_CONN_CLI_IDENTD = 51
+	REJ_DIFF_UID = 52
 
 
 def try_to_connect(data):
